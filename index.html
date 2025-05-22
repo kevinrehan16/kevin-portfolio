@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kevin Macandog | Developer Portfolio</title>
+  <!-- Add Google Fonts link -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container">
+      <div class="logo">KevinM.</div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">&#9776;</div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Hi, I'm <span>Kevin Macandog</span></h1>
+        <h2>Full-Stack Developer | Front-End Specialist</h2>
+        <p>I build responsive, accessible websites and apps using modern web technologies. Let's create something awesome together.</p>
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About Me Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <h2>About Me</h2>
+        <div class="about-info">
+          <img src="/assets/img/kevin.jpg" alt="Kevin Macandog" class="profile-img" />
+          <div class="text">
+            <p>I'm Kevin Macandog, a passionate Full-Stack Developer based in the Philippines. I specialize in building responsive, user-friendly web applications using modern web technologies.</p>
+            <p>With a strong background in both front-end and back-end development, I create seamless, scalable, and accessible solutions for users across all devices. I'm always eager to learn new technologies and improve my skills to deliver the best results for every project.</p>
+            <p>In my free time, I love working on open-source projects, experimenting with new frameworks, and writing technical blogs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <h3>KevinM Portfolio</h3>
+          <p>A personal portfolio showcasing my skills, projects, and experience. Built using HTML, CSS, and JavaScript (SASS for styling).</p>
+          <p><strong>Technologies Used:</strong> HTML, CSS, SASS, JavaScript</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card">
+          <h3>Task Manager App</h3>
+          <p>A task management app that allows users to add, edit, and delete tasks. Built with React, Node.js, and MongoDB.</p>
+          <p><strong>Technologies Used:</strong> React, Node.js, MongoDB</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+
+        <!-- Add more projects as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <h3>HTML5</h3>
+          <p>Markup language for creating structured documents for the web.</p>
+        </div>
+        <div class="skill">
+          <h3>CSS3</h3>
+          <p>Used for styling and layout of web pages.</p>
+        </div>
+        <div class="skill">
+          <h3>JavaScript</h3>
+          <p>Programming language for adding interactivity to web pages.</p>
+        </div>
+        <div class="skill">
+          <h3>React</h3>
+          <p>JavaScript library for building user interfaces.</p>
+        </div>
+        <div class="skill">
+          <h3>Node.js</h3>
+          <p>JavaScript runtime for building server-side applications.</p>
+        </div>
+        <div class="skill">
+          <h3>MongoDB</h3>
+          <p>NoSQL database for handling large datasets and scalability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <div class="container">
+      <div class="contact-form">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message"></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </div>
+
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <div class="info-item">
+          <form>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="input-group" style="display: none;">
+                    <input id="srchmap" class="form-control input-sm input-flat" type="text" placeholder="Type in your address" value="Sitio Pagkakaisa Sucat Muntinlupa City" autocomplete="off" />
+                </div>
+              </div>
+            </div>            
+            <fieldset style="display: none;">
+              <label>Latitude</label>
+              <input name="lat" type="text" value="14.4660" id="txtlocationlat">
+              <label>Longitude</label>
+              <input name="lng" type="text" value="121.0470" id="txtlocationlng">
+              <label>Formatted Address</label>
+              <input name="formatted_address" type="text" value="">
+            </fieldset>
+          </form>
+          <div id="map_canvas" style="height: 350px; width:100% !important; border-radius: 0px !important; margin-top: 5px;"></div>
+        </div>
+        <div class="info-item">
+          <strong>Email</strong>
+          <p>kevinrehan16@gmail.com</p>
+        </div>
+        <div class="info-item">
+          <strong>Phone</strong>
+          <p>+63 915 316 9518</p>
+        </div>
+      </div>
+    </div>
+    
+
+    
+  </section>
+
+
+  
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>Thank you for visiting my website!</p>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank">Facebook</a>
+          <a href="https://twitter.com" target="_blank">Twitter</a>
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- FontAwesome for social icons (optional) -->
+  <script src="js/script.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9N071f-dwiyVB3WtyD3KH1LySx4bf6HA&callback=myMap"></script> -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9N071f-dwiyVB3WtyD3KH1LySx4bf6HA" type="text/javascript"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      geocodesearching();
+    });
+
+    function geocodesearching(){
+        var geocoder = new google.maps.Geocoder();
+        var address = document.getElementById("srchmap").value;
+        var lat = document.getElementById("txtlocationlat").value;
+        var lng = document.getElementById("txtlocationlng").value;
+
+        geocoder.geocode( { 'address': address}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            var latitude = results[0].geometry.location.lat();
+            var longitude = results[0].geometry.location.lng();
+            initialize(latitude,longitude);
+          }
+          else{
+            initialize(lat,lng);
+          }
+        });
+      }
+
+      function initialize(latitude,longitude) {
+          var latlng = new google.maps.LatLng(latitude,longitude);
+
+          var myOptions = {
+            zoom: 16,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControl: false
+          };
+          var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+
+          var marker = new google.maps.Marker({
+            position: latlng, 
+            map: map,
+            draggable: true
+          });
+
+          google.maps.event.addListener(marker, 'drag', function(evt){
+              console.log("marker is being dragged");
+          });
+      }
+  </script>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Back to Top">↑</button>
+</body>
