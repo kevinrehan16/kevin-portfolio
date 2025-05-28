@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="description" content="Kevin Macandog Personal Portfolio Website">
+  <meta name="keywords" content="Kevin, Macandog, Personal Portfolio">
+  <meta name="author" content="Kevin Macandog">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- !!!<meta http-equiv="refresh" content="5"> USING THIS THE WEBPAGE WILL REFRESH EVERY 5 SECONDS -->
   <title>Kevin Macandog | Developer Portfolio</title>
   <!-- Add Google Fonts link -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -32,9 +37,10 @@
     <div class="container">
       <div class="hero-content">
         <h1>Hi, I'm <span>Kevin Macandog</span></h1>
-        <h2>Full-Stack Developer | Front-End Developer | Back-End Developer</h2>
+        <h2>A <span id="typedText"></span><span class="cursor">|</span></h2>
         <p>I build responsive, accessible websites and software using modern web technologies. Let's create something awesome together.</p>
-        <a href="#projects" class="btn">View My Work</a>
+        <a href="#projects" class="btn"><i class='bx  bx-star-square'></i> View My Work</a>
+        <a href="#projects" class="btn"><i class='bx  bx-arrow-down-square'></i>  Download Resume</a>
       </div>
       <div class="hero-image">
         <img src="assets/img/kevin.jpg" alt="Kevin Macandog" class="img-profile" />
@@ -46,14 +52,26 @@
   <!-- About Me Section -->
   <section id="about" class="about">
     <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">ABOUT ME</h4>
+      </div>
       <div class="about-content">
-        <h2>About Me</h2>
+        <div class="about-image">
+          <img src="assets/img/info1.jpg" alt="Kevin Macandog" class="profile-img" />
+        </div>
         <div class="about-info">
-          <img src="assets/img/kevin.jpg" alt="Kevin Macandog" class="profile-img" />
           <div class="text">
-            <p>I'm Kevin Macandog, a passionate Full-Stack Developer based in the Philippines. I specialize in building responsive, user-friendly web applications using modern web technologies.</p>
-            <p>With a strong background in both front-end and back-end development, I create seamless, scalable, and accessible solutions for users across all devices. I'm always eager to learn new technologies and improve my skills to deliver the best results for every project.</p>
-            <p>In my free time, I love working on open-source projects, experimenting with new frameworks, and writing technical blogs.</p>
+            <p class="text-name">Hi There! I'm <span>Kevin Macandog</span></p>
+            <p class="text-position">Software Developer</p>
+            <p class="text-description">I'm a Software Developer with a passion for building efficient, scalable, and user-friendly applications. I specialize in both front-end and back-end development. I'm always eager to solve real-world problems through clean, maintainable code and continuous learning.</p>
+            <ul class="text-others">
+              <li><span>Birthday</span> : <span>July 6, 1995</span></li>
+              <li><span>Mobile</span> : <span>+63 915-316-9518</span></li>
+              <li><span>Email</span> : <span>kevinrehan16@gmail.com.com</span></li>
+              <li><span>From</span> : <span>Sucat, Muntinlupa City</span></li>
+              <li><span>Language</span> : <span>English, Tagalog</span></li>
+            </ul>
+            
           </div>
         </div>
       </div>
@@ -66,6 +84,26 @@
       <h2>My Projects</h2>
       <div class="projects-grid">
         <!-- Project 1 -->
+        <div class="project-card">
+          <h3>System Dashboards</h3>
+          <ul style="list-style: number; color: black;">
+            <li>Dealer Management System</li>
+            <li>Loan Monitoring System</li>
+            <li>Clinic Management System</li>
+            <li>Mall Management System</li>
+            <li>Hotel API 3rd Party</li>
+            <li>MetroDental API 3rd Party</li>
+            <li>Marina Management System</li>
+            <li>Visitors Management System</li>
+            <li>Contact Information System</li>
+            <li>City Portal System</li>
+            <li>Discipleship Network System</li>
+          </ul>
+          <br>
+          <p><strong>Technologies Used:</strong> HTML, CSS, SASS, JavaScript, JQuery, AJAX, PHP, MySQL, APIs</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+        
         <div class="project-card">
           <h3>KevinM Portfolio</h3>
           <p>A personal portfolio showcasing my skills, projects, and experience. Built using HTML, CSS, and JavaScript (SASS for styling).</p>

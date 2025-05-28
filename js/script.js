@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (roles.length) setTimeout(type, delayBetweenRoles);
   // Toggle mobile navigation
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
@@ -66,4 +67,41 @@ function myMap() {
     zoom:5,
   };
   var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+const roles = [
+  "Full-Stack Developer.",
+  "Front-End Developer.",
+  "Back-End Developer.",
+  "Software Engineer.",
+  "Professional Coder.",
+  "Programmer.",
+];
+const typingSpeed = 70;
+const erasingSpeed = 50;
+const delayBetweenRoles = 2000;
+
+let textIndex = 0;
+let charIndex = 0;
+const typedText = document.getElementById("typedText");
+
+function type() {
+  if (charIndex < roles[textIndex].length) {
+    typedText.textContent += roles[textIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingSpeed);
+  } else {
+    setTimeout(erase, delayBetweenRoles);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    typedText.textContent = roles[textIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, erasingSpeed);
+  } else {
+    textIndex = (textIndex + 1) % roles.length;
+    setTimeout(type, typingSpeed);
+  }
 }

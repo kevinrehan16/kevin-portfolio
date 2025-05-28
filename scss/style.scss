@@ -1,9 +1,10 @@
 @use 'sass:color';
-$primary-color: #1e1e2f;
-$accent-color: #00adb5;
+$primary-color: #222428;
+$accent-color: #FE004D;
 $text-color: #ffffff;
 $bg-dark: #121212;
 $accent-glow: rgba(0, 173, 181, 0.4);
+$bg-dark-blue: #0a101e;
 
 * {
   margin: 0;
@@ -60,17 +61,63 @@ a {
   border-radius: 5px;
   font-weight: bold;
   transition: transform 0.3s, box-shadow 0.3s;
+  animation: slideUp 0.5s ease forwards;
 
   &:hover {
     background: color.adjust($accent-color, $lightness: -10%);
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(238, 234, 234, 0.2);
   }
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: auto;
+    // background-color: red;
+    
+    .st-section-heading.st-style1 {
+      text-align: center;
+      padding: 5rem 0;
+      margin-bottom: 41px;
+
+      .st-section-heading-title {
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $accent-color;
+        position: relative;
+        z-index: 10;
+        letter-spacing: 1px;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          bottom: -16px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &::before {
+          background-color: $primary-color;
+          width: 170px;
+        }
+
+        &::after {
+          background-color: $accent-color;
+          width: 70px;
+        }
+
+      }
+      
+    }
+  }
+
 // TOPBAR
 .topbar {
-  background: $bg-dark;
+  background: $primary-color;
   padding: 1rem 0;
   position: fixed;
   width: 100%;
@@ -227,9 +274,25 @@ a {
       }
 
       h2 {
+        text-transform: capitalize;
         font-size: 1.5rem;
         color: color.adjust($text-color, $lightness: 20%);
         margin-bottom: 1rem;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid black;
+
+        .cursor {
+          color: $accent-color;
+          display: inline-block;
+          animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+        
       }
 
       p {
@@ -248,9 +311,10 @@ a {
         border-radius: 5px;
         font-weight: bold;
         transition: background 0.3s;
+        margin: 0 1px;
 
         &:hover {
-          background: color.adjust($accent-color, $lightness: -10%);
+          // background: color.adjust($accent-color, $lightness: -10%);
         }
       }
     }
@@ -295,52 +359,144 @@ a {
 
 // ABOUT ME SECTION
 .about {
-  padding: 4rem 0;
+
   background-color: #f4f4f4;
   height: 100vh;
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
+  // background-color: red;
 
   .about-content {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    // background-color: red;
 
-    h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      color: $primary-color;
-    }
+      .about-image {
+        position: relative;
+        flex: 1 1 550px; /* grow, shrink, basis */
+        width: 100%;
+        // height: 570px;
+        // background-color: red;
+        
+        &::before {
+          content: "";
+          position: absolute;
+          top: -20%;
+          left: 0;
+          width: 55%;
+          height: 480px;
+          background-color: $accent-color; /* your desired background color */
+          // z-index: -1;
+        }
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #333;
-      margin-bottom: 1.5rem;
-      max-width: 800px;
-      margin: 0 auto;
+        .profile-img {
+          position: relative;
+          top: 10%;
+          left: 5%;
+          width: 90%;
+          height: 70%;
+          box-shadow: rgb(108, 108, 108) 0px 0px 10px 0px;
+          object-fit: cover;
+        }
+      }      
+
+      .about-info {
+        flex: 2 1 400px;
+
+        .text {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: $primary-color;
+
+          .text-name {
+            font-size: 2.5rem;
+
+            span {
+              font-weight: 600;
+            }
+          }
+
+          .text-position {
+            font-size: 1.4rem;
+            color: $accent-color;
+          }
+
+          .text-description {
+            font-size: 1rem;
+            text-align: justify;
+          }
+
+          .text-others {
+            list-style: none;
+            font-weight: 900;
+
+            li{
+              display: list-item;
+              text-align: -webkit-match-parent;
+              unicode-bidi: isolate;
+
+              span:first-child {
+                  display: inline-block;
+                  width: 108px;
+                  margin-right: -5px;
+                  font-weight: 700;
+                  color: $accent-color;
+              }
+
+              span:last-child {
+                  margin-left: 10px;
+                  font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+
+    // h2 {
+    //   font-size: 2.5rem;
+    //   margin-bottom: 1.5rem;
+    //   color: $primary-color;
+    // }
+
+    // p {
+    //   font-size: 1.1rem;
+    //   line-height: 1.8;
+    //   color: #333;
+    //   margin-bottom: 1.5rem;
+    //   max-width: 800px;
+    //   margin: 0 auto;
+    // }
+
+    // .about-info {
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   gap: 2rem;
+    //   flex-wrap: wrap;
+
+    //   .profile-img {
+    //     width: 90%;
+    //     height: 200px;
+    //     // border-radius: 50%;
+    //     object-fit: cover;
+    //     border: 5px solid $accent-color;
+    //   }
+
+    //   .text {
+    //     max-width: 700px;
+    //   }
+    // }
+  }
+
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
     }
 
     .about-info {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-
-      .profile-img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 5px solid $accent-color;
-      }
-
-      .text {
-        max-width: 700px;
-      }
+      flex: 1 1 auto;
     }
   }
 }
@@ -580,6 +736,7 @@ a {
   @media (max-width: 768px) {
     .container {
       flex-direction: column;
+      text-align: center;
     }
 
     .contact-form,
