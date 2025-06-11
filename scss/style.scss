@@ -36,6 +36,37 @@ body {
   background: $text-color;
 }
 
+#backToTop {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: $accent-color;
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 999;
+
+  &:hover {
+    background: $accent-color-light;
+    transform: scale(1.1);
+  }
+}
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .modal {
   position: fixed;
   inset: 0;
@@ -1142,7 +1173,7 @@ header {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background-image: url('/assets/img/contactme.jpg'); // <-- use your image path
+    background-image: url('../assets/img/contactme.jpg'); // <-- use your image path
     background-size: cover;
     background-position: center;
     background-attachment: fixed; // Parallax effect

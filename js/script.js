@@ -281,3 +281,23 @@ function closeModal() {
   document.getElementById('project-modal').style.display = 'none';
   document.body.style.overflow = '';
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const backToTop = document.getElementById('backToTop');
+  const homeSection = document.getElementById('home');
+
+  window.addEventListener('scroll', () => {
+    // Get the bottom position of the #home section
+    const homeBottom = homeSection.offsetTop + homeSection.offsetHeight;
+    // Show button if scrolled past #home
+    if (window.scrollY > homeBottom - 60) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
