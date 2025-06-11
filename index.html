@@ -9,262 +9,444 @@
   <!-- !!!<meta http-equiv="refresh" content="5"> USING THIS THE WEBPAGE WILL REFRESH EVERY 5 SECONDS -->
   <title>Kevin Macandog | Developer Portfolio</title>
   <!-- Add Google Fonts link -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css" />
+  <!-- FOR PROGRAMMING ICONS I'M USING THIS LINK https://yesicon.app/eos-icons/api -->
 </head>
 <body>
 
-  <!-- Topbar -->
-  <header class="topbar">
-    <div class="container">
-      <div class="logo">KevinM.</div>
-      <nav class="nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">&#9776;</div>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Hi, I'm <span>Kevin Macandog</span></h1>
-        <h2>A <span id="typedText"></span><span class="cursor">|</span></h2>
-        <p>I build responsive, accessible websites and software using modern web technologies. Let's create something awesome together.</p>
-        <a href="#projects" class="btn"><i class='bx  bx-star-square'></i> View My Work</a>
-        <a href="#projects" class="btn"><i class='bx  bx-arrow-down-square'></i>  Download Resume</a>
+  <div id="project-modal" class="modal" style="display:none;">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <br>
+      <button class="modal-prev" aria-label="Previous image"><i class='bxr  bx-chevron-left'></i></button>
+      <div class="modal-img-wrapper">
+        <img id="modal-img" src="" loading="lazy" alt="Project Preview" />
       </div>
-      <div class="hero-image">
-        <img src="assets/img/kevin.jpg" alt="Kevin Macandog" class="img-profile" />
+      <button class="modal-next" aria-label="Next image"><i class='bxr  bx-chevron-right'></i> </button>
+      <div id="modal-title"></div>
+    </div>
+  </div>
+
+  <!-- Topbar -->
+  <header>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">KevinM.</a>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contacts">Contact</a></li>
+      </ul>
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class='bx bx-menu-wider'></i>
+      </div>
+    </nav>
+  </header>
+  
+  <section class="section__container" id="home">
+    <div class="section__header">
+      <div class="section__info">
+        <h1>Kevin Macandog</h1>
+        <h2>A <span id="typedText"></span><span class="cursor">|</span></h2>
+      </div>
+      <div class="section__content">
+        <p class="content__text">I build responsive, accessible websites and software using modern web technologies. Let's create something awesome together.</p>
+        <div class="btn-header">
+          <a href="#projects" class="btn"><i class='bx  bx-star-square'></i> View My Work</a>
+          <a href="assets/docs/UpdatedResume.pdf" download class="btn"><i class='bx  bx-arrow-down-square'></i>  Download CV</a>
+        </div>
       </div>
     </div>
   </section>
+  
 
 
-  <!-- About Me Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">ABOUT ME</h4>
-      </div>
-      <div class="about-content">
-        <div class="about-image">
-          <img src="assets/img/info1.jpg" alt="Kevin Macandog" class="profile-img" />
+  <section class="section__container" id="about">
+    <div class="section__header">
+      <h2>About Me</h2>
+      <h3>My Informations</h3>
+    </div>
+    <div class="section__about">
+      <div class="about__image">
+        <div class="image-inner"> 
+          <div class="image-back"></div>
+          <img src="assets/img/info2.jpg" alt="Styled Image" class="image-front">
         </div>
-        <div class="about-info">
-          <div class="text">
-            <p class="text-name">Hi There! I'm <span>Kevin Macandog</span></p>
-            <p class="text-position">Software Developer</p>
-            <p class="text-description">I'm a Software Developer with a passion for building efficient, scalable, and user-friendly applications. I specialize in both front-end and back-end development. I'm always eager to solve real-world problems through clean, maintainable code and continuous learning.</p>
-            <ul class="text-others">
-              <li><span>Birthday</span> : <span>July 6, 1995</span></li>
-              <li><span>Mobile</span> : <span>+63 915-316-9518</span></li>
-              <li><span>Email</span> : <span>kevinrehan16@gmail.com.com</span></li>
-              <li><span>From</span> : <span>Sucat, Muntinlupa City</span></li>
-              <li><span>Language</span> : <span>English, Tagalog</span></li>
-            </ul>
-            
+         <!-- haha -->
+      </div>
+      <div class="about__info">
+        <div class="text">
+          <p class="text-name">Hi there! I'm <span>Kevin Macandog</span></p>
+          <p class="text-position">Software Developer</p>
+          <p class="text-description">I'm a Software Developer with a passion for building efficient, scalable, and user-friendly applications. I specialize in both front-end and back-end development. I'm always eager to solve real-world problems through clean, maintainable code and continuous learning.</p>
+          <ul class="text-others">
+            <li><span>Birthday</span> : <span>July 06, 1995</span></li>
+            <li><span>Age</span> : <span>29 years old</span></li>
+            <li><span>Religion</span> : <span>Christian</span></li>
+            <li><span>From</span> : <span>Sucat, Muntinlupa City</span></li>
+            <li><span>Language</span> : <span>English, Tagalog</span></li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section__container" id="passions">
+    <div class="section__header">
+      <h2>Passions</h2>
+      <h3>Know Me Better</h3>
+    </div>
+    <div class="section__passions">
+      <div class="carousel" id="passion-carousel">
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <div class="icon-bubble"><i class='bx bx-code-alt'></i></div>
+            <h4>Coding</h4>
+            <p>Building efficient and scalable software solutions is my core passion.</p>
+          </div>
+          <div class="carousel-item">
+            <div class="icon-bubble"><i class='bx bx-paint'></i></div>
+            <h4>UI/UX Design</h4>
+            <p>I love crafting beautiful, user-friendly interfaces and experiences.</p>
+          </div>
+          <div class="carousel-item">
+            <div class="icon-bubble"><i class='bx bx-book'></i></div>
+            <h4>Learning</h4>
+            <p>Continuous learning keeps me updated and inspired in tech.</p>
+          </div>
+          <div class="carousel-item">
+            <div class="icon-bubble"><i class='bx bx-group'></i></div>
+            <h4>Collaboration</h4>
+            <p>Working with teams and sharing knowledge is always rewarding.</p>
+          </div>
+          <div class="carousel-item">
+            <div class="icon-bubble"><i class='bx bx-light-bulb-on'></i></div>
+            <h4>Problem Solving</h4>
+            <p>I enjoy tackling challenges and finding creative solutions.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>My Projects</h2>
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <h3>System Dashboards</h3>
-          <ul style="list-style: number; color: black;">
-            <li>Dealer Management System</li>
-            <li>Loan Monitoring System</li>
-            <li>Clinic Management System</li>
-            <li>Mall Management System</li>
-            <li>Hotel API 3rd Party</li>
-            <li>MetroDental API 3rd Party</li>
-            <li>Marina Management System</li>
-            <li>Visitors Management System</li>
-            <li>Contact Information System</li>
-            <li>City Portal System</li>
-            <li>Discipleship Network System</li>
-          </ul>
-          <br>
-          <p><strong>Technologies Used:</strong> HTML, CSS, SASS, JavaScript, JQuery, AJAX, PHP, MySQL, APIs</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-        
-        <div class="project-card">
-          <h3>KevinM Portfolio</h3>
-          <p>A personal portfolio showcasing my skills, projects, and experience. Built using HTML, CSS, and JavaScript (SASS for styling).</p>
-          <p><strong>Technologies Used:</strong> HTML, CSS, SASS, JavaScript</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-        
-        <!-- Project 2 -->
-        <div class="project-card">
-          <h3>Task Manager App</h3>
-          <p>A task management app that allows users to add, edit, and delete tasks. Built with React, Node.js, and MongoDB.</p>
-          <p><strong>Technologies Used:</strong> React, Node.js, MongoDB</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-
-        <!-- Add more projects as needed -->
+    <div class="section__team">
+      <div class="parallax-team-bg"></div>
+      <div class="team-content">
+        <!-- Your team content here, if any -->
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <div class="container">
-      <h2>My Skills</h2>
-      <div class="skills-grid">
-        <div class="skill">
-          <h3>HTML5</h3>
-          <p>Markup language for creating structured documents for the web.</p>
-        </div>
-        <div class="skill">
-          <h3>CSS3</h3>
-          <p>Used for styling and layout of web pages.</p>
-        </div>
-        <div class="skill">
-          <h3>JavaScript</h3>
-          <p>Programming language for adding interactivity to web pages.</p>
-        </div>
-        <div class="skill">
-          <h3>React</h3>
-          <p>JavaScript library for building user interfaces.</p>
-        </div>
-        <div class="skill">
-          <h3>Node.js</h3>
-          <p>JavaScript runtime for building server-side applications.</p>
-        </div>
-        <div class="skill">
-          <h3>MongoDB</h3>
-          <p>NoSQL database for handling large datasets and scalability.</p>
-        </div>
+  <section class="section__skills" id="skills">
+    <div class="section__header">
+      <h2>Skills</h2>
+      <h3>My Expertise</h3>
+    </div>
+    <div class="skills__container">
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/html5.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">HTML5</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/css3.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">CSS3</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/bootstrap.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">Bootstrap</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/javascript.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">JavaScript</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/jquery.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">jQuery</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/ajax.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">Ajax</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/php.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">PHP</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/laravel.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">Laravel</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/vue.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">VueJS</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/react.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">React.js</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/node.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">Node.js</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/mysql.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">MySQL</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/api.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">API</h4>
+      </div>
+      
+    </div>
+  </section>
 
-        <!-- Added Skills -->
-        <div class="skill">
-          <h3>PHP</h3>
-          <p>Server-side scripting language used to create dynamic web content.</p>
+  <section class="projects" id="projects">
+    <div class="section__header">
+      <h2>PROJECTS</h2>
+      <h3>See My Work</h3>
+    </div>
+    <div class="projects__tabs">
+      <button class="tab-btn active" data-filter="all">All</button>
+      <button class="tab-btn" data-filter="company">Company</button>
+      <button class="tab-btn" data-filter="client">Client</button>
+      <button class="tab-btn" data-filter="personal">Personal</button>
+    </div>
+    <div class="projects__gallery">
+      <div class="project-img" data-type="company">
+        <img src="assets/img-projects/mall1.jpg" loading="lazy" alt="Company Project 1">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">Mall Management</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
         </div>
-        <div class="skill">
-          <h3>Laravel</h3>
-          <p>PHP framework for building modern, robust web applications.</p>
+      </div>
+      <div class="project-img" data-type="company">
+        <img src="assets/img-projects/dms3.jpg" loading="lazy" alt="Company Project 2">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">Dealer Management</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
         </div>
-        <div class="skill">
-          <h3>Ajax</h3>
-          <p>Technique for asynchronous data loading without reloading the page.</p>
+      </div>
+      <div class="project-img" data-type="company">
+        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Client Project 1">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">FPMI-Marina</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
         </div>
-        <div class="skill">
-          <h3>jQuery</h3>
-          <p>JavaScript library that simplifies DOM manipulation and events.</p>
+      </div>
+      <div class="project-img" data-type="company">
+        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Client Project 2">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">Visitors Management</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
         </div>
-        <div class="skill">
-          <h3>Vue</h3>
-          <p>Progressive JavaScript framework for building interactive user interfaces.</p>
+      </div>
+      <div class="project-img" data-type="company">
+        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Personal Project 1">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">City Portal</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
         </div>
-        <div class="skill">
-          <h3>MySQL</h3>
-          <p>Relational database management system for storing structured data.</p>
+      </div>
+      <div class="project-img" data-type="company">
+        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Personal Project 2">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">Contact Tracing</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
         </div>
+      </div>
+      <div class="project-img" data-type="company">
+        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Personal Project 2">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">SMS API</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
+        </div>
+      </div>
+      <div class="project-img" data-type="company">
+        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Personal Project 2">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">Hotel API</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
+        </div>
+      </div>
+      <div class="project-img" data-type="company">
+        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Personal Project 2">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">Equicom API</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
+        </div>
+      </div>
+      <div class="project-img" data-type="client">
+        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Personal Project 2">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">Disciple Network</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
+        </div>
+      </div>
+      <div class="project-img" data-type="personal">
+        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Personal Project 2">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">Admin Dashboard</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
+        </div>
+      </div>
+      <div class="project-img" data-type="personal">
+        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Personal Project 2">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">Car Rental Website</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Add more images as needed, just set data-type accordingly -->
+    </div>
+  </section>
+
+  <section class="section__contacts" id="contacts">
+    <div class="parallax-bg"></div>
+    <div class="contacts-header">
+      <div class="contacts-info">
+        <h3>Info</h3>
+        <ul>
+          <li>
+            <i class='bxr  bxs-location'></i>
+            <div class="detail-info">
+              <strong>Address</strong> 
+              <h6>Sucat, Muntinlupa City</h6>
+            </div>
+          </li>
+          <li>
+            <i class="bxr bxs-envelope"></i>
+            <div class="detail-info">
+              <strong>Email</strong>
+              <a href="javascript:void(0)">kevinrehan16@gmail.com</a>
+            </div>
+          </li>
+          <li>
+            <i class="bxr bxs-mobile"></i>
+            <div class="detail-info">
+              <strong>Phone:</strong> 
+              <a href="javascript:void(0)">+63 912 345 6789</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts-message">
+        <h3>Contact</h3>
+        <form>
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="email" placeholder="Subject" required>
+          <textarea rows="4" placeholder="Message" required></textarea>
+          <button type="submit" onclick="alert('This is not working, please kindly email me.')"><i class="bxr bxs-send"></i> Send</button>
+        </form>
+      </div>
+    </div>
+    <div class="contacts__map">
+      <form>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="input-group" style="display: none;">
+                <input id="srchmap" class="form-control input-sm input-flat" type="text" placeholder="Type in your address" value="Sitio Pagkakaisa Sucat Muntinlupa City" autocomplete="off" />
+            </div>
+          </div>
+        </div>            
+        <fieldset style="display: none;">
+          <label>Latitude</label>
+          <input name="lat" type="text" value="14.4660" id="txtlocationlat">
+          <label>Longitude</label>
+          <input name="lng" type="text" value="121.0470" id="txtlocationlng">
+          <label>Formatted Address</label>
+          <input name="formatted_address" type="text" value="">
+        </fieldset>
+      </form>
+      <div id="map_canvas" style="height: 450px; width:100% !important; border-radius: 0px !important; margin-top: 5px;">
       </div>
     </div>
   </section>
 
-
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <div class="container">
-      <div class="contact-form">
-        <div class="form-group">
-          <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message"></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-      </div>
-
-      <div class="contact-info">
-        <h3>Get in Touch</h3>
-        <div class="info-item">
-          <form>
-            <div class="col-md-12">
-              <div class="row">
-                <div class="input-group" style="display: none;">
-                    <input id="srchmap" class="form-control input-sm input-flat" type="text" placeholder="Type in your address" value="Sitio Pagkakaisa Sucat Muntinlupa City" autocomplete="off" />
-                </div>
-              </div>
-            </div>            
-            <fieldset style="display: none;">
-              <label>Latitude</label>
-              <input name="lat" type="text" value="14.4660" id="txtlocationlat">
-              <label>Longitude</label>
-              <input name="lng" type="text" value="121.0470" id="txtlocationlng">
-              <label>Formatted Address</label>
-              <input name="formatted_address" type="text" value="">
-            </fieldset>
-          </form>
-          <div id="map_canvas" style="height: 350px; width:100% !important; border-radius: 0px !important; margin-top: 5px;"></div>
-        </div>
-        <div class="info-item">
-          <strong>Email</strong>
-          <p>kevinrehan16@gmail.com</p>
-        </div>
-        <div class="info-item">
-          <strong>Phone</strong>
-          <p>+63 915 316 9518</p>
-        </div>
-      </div>
-    </div>
-    
-
-    
-  </section>
-
-
-  
-  <!-- Footer Section -->
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="container">
       <div class="footer-content">
-        <p>Thank you for visiting my website!</p>
-        <div class="social-links">
-          <a href="https://facebook.com" target="_blank">Facebook</a>
-          <a href="https://twitter.com" target="_blank">Twitter</a>
-          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        </div>
+        <p>Have a project in mind?</p>
+        <a href=""><h1>LET'S WORK</h1></a>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Kevin Macandog. All rights reserved.</p>
       </div>
     </div>
   </footer>
-
-
+  
   <!-- FontAwesome for social icons (optional) -->
   <script src="js/script.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9N071f-dwiyVB3WtyD3KH1LySx4bf6HA&callback=myMap"></script> -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9N071f-dwiyVB3WtyD3KH1LySx4bf6HA" type="text/javascript"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -303,7 +485,7 @@
           var marker = new google.maps.Marker({
             position: latlng, 
             map: map,
-            draggable: true
+            draggable: false
           });
 
           google.maps.event.addListener(marker, 'drag', function(evt){
@@ -311,7 +493,5 @@
           });
       }
   </script>
-
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTop" class="scroll-to-top" aria-label="Back to Top">↑</button>
+  
 </body>
