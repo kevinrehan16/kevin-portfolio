@@ -15,6 +15,15 @@
   <!-- FOR PROGRAMMING ICONS I'M USING THIS LINK https://yesicon.app/eos-icons/api -->
 </head>
 <body>
+  <div id="loader">
+    <div class="modern-loader">
+      <span class="loader-dot"></span>
+      <span class="loader-dot"></span>
+      <span class="loader-dot"></span>
+      <span class="loader-dot"></span>
+    </div>
+    <span class="loader-text">Wait the page is loading...</span>
+  </div>
 
   <div id="project-modal" class="modal" style="display:none;">
     <div class="modal-backdrop"></div>
@@ -405,7 +414,10 @@
           <input type="email" placeholder="Email" required>
           <input type="email" placeholder="Subject" required>
           <textarea rows="4" placeholder="Message" required></textarea>
-          <button type="submit" onclick="alert('This is not working, please kindly email me.')"><i class="bxr bxs-send"></i> Send</button>
+          <!-- <button type="submit" onclick="alert('This is not working, please kindly email me.')"><i class="bxr bxs-send"></i> Send</button> -->
+          <div class="btn-header" onclick="alert('This is not working, please kindly email me.')">
+            <a href="#projects" class="btn"><i class='bxr  bxs-send-alt'></i> Send Message</a>
+          </div>
         </form>
       </div>
     </div>
@@ -448,6 +460,7 @@
     <i class='bx bx-chevron-up'></i>
   </button>
   <!-- FontAwesome for social icons (optional) -->
+  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="js/script.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9N071f-dwiyVB3WtyD3KH1LySx4bf6HA" type="text/javascript"></script>

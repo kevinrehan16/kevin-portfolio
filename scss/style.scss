@@ -36,6 +36,52 @@ body {
   background: $text-color;
 }
 
+#loader {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: linear-gradient(135deg, $bg-dark-blue 0%, $primary-color 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+
+.modern-loader {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.loader-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $accent-color-light 0%, $accent-color 100%);
+  opacity: 0.8;
+  animation: bounce 1s infinite alternate;
+}
+
+.loader-dot:nth-child(2) { animation-delay: 0.2s; }
+.loader-dot:nth-child(3) { animation-delay: 0.4s; }
+.loader-dot:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes bounce {
+  0%   { transform: translateY(0);   opacity: 0.7; }
+  50%  { transform: translateY(-18px); opacity: 1; }
+  100% { transform: translateY(0);   opacity: 0.7; }
+}
+
+.loader-text {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  opacity: 0.85;
+  margin-top: 8px;
+}
+
 #backToTop {
   position: fixed;
   right: 2rem;
@@ -201,17 +247,24 @@ header {
     background: transparent; // or match above if you want nav to blend
   }
 
-  
-
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1500px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 20px 20px;
     background: $bg-dark;
     z-index: 10;
+
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 1s cubic-bezier(.77,0,.18,1), transform 1s cubic-bezier(.77,0,.18,1);
+
+    &.nav-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     .nav__logo {
       a {
@@ -476,7 +529,7 @@ header {
 
   .section__about {
     display: flex;
-    max-width: 1500px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 1rem;
     gap: 1rem;
@@ -631,7 +684,7 @@ header {
 
   .section__passions {
     width: 100%;
-    max-width: 1500px;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -810,7 +863,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
-    max-width: 1500px;
+    max-width: 1300px;
     margin: auto;
     padding: 2rem;
 
@@ -1001,7 +1054,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 1rem;
     justify-content: flex-start;
@@ -1299,22 +1352,56 @@ header {
           }
         }
 
-        button {
-          background: $accent-color;
-          color: #fff;
-          border: none;
-          border-radius: 0.5em;
-          padding: 0.9em 1.5em;
-          font-size: 1.1rem;
-          font-weight: 500;
-          cursor: pointer;
-          box-shadow: 0 2px 8px rgba($accent-color, 0.10);
-          transition: background 0.2s, box-shadow 0.2s;
-          letter-spacing: 1px;
-
-          &:hover {
-            background: $accent-color-light;
-            box-shadow: 0 4px 16px rgba($accent-color, 0.18);
+        .btn-header {
+          width: 100% !important;
+          gap: 0.8rem;
+          z-index: 10;
+          
+          .btn {
+            display: flex;
+            padding: 1rem 2rem;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            background: linear-gradient(to right, #444, #222);
+            border: none;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, color 0.3s ease;
+            z-index: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* <-- Shadow below */
+            border-left: 4px solid $accent-color;
+            z-index: 10;
+            font-size: clamp(.5rem, 5vw, 1rem);
+    
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(to right, $accent-color, $accent-color-light);
+              transition: left 0.4s ease;
+              z-index: -1;
+            }
+    
+            &:hover, &:hover i {
+              color: white;
+            }
+    
+            &:hover::before {
+              left: 0; /* Mag-slide papasok mula kaliwa */
+            }
+    
+            i {
+              color: $accent-color;
+              font-size: 25px;
+            }
           }
         }
       }
@@ -1474,6 +1561,10 @@ header {
           justify-content: center;
           gap: 0.8rem;
           z-index: 10;
+
+          .btn {
+            font-size: 0.8rem;
+          }
         }
 
         p {
@@ -1491,6 +1582,34 @@ header {
   #about {
     margin-bottom: 2rem;
     
+    .section__header {
+      text-align: center;
+      padding: 5rem 0 2.5rem 0;
+
+      h3 {
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 1px;
+            background-color: $accent-color-light;
+            margin-top: 13px;
+            margin-left: -75px;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 1px;
+            background-color: $accent-color-light;
+            margin-top: 13px;
+            margin-left: 5px;
+        }
+      }
+    }
+
     .section__about {
       flex-direction: column;
       align-items: center;
@@ -1552,4 +1671,93 @@ header {
     }
   }
 
+  #passions {
+    .section__header {
+      text-align: center;
+      padding: 5rem 0 2.5rem 0;
+
+      h3 {
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 1px;
+            background-color: $accent-color-light;
+            margin-top: 13px;
+            margin-left: -75px;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 1px;
+            background-color: $accent-color-light;
+            margin-top: 13px;
+            margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  #skills {
+    .section__header {
+      text-align: center;
+      padding: 5rem 0 2.5rem 0;
+
+      h3 {
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 1px;
+            background-color: $accent-color-light;
+            margin-top: 13px;
+            margin-left: -75px;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 1px;
+            background-color: $accent-color-light;
+            margin-top: 13px;
+            margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  #projects {
+    .section__header {
+      text-align: center;
+      padding: 5rem 0 2.5rem 0;
+
+      h3 {
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 1px;
+            background-color: $accent-color-light;
+            margin-top: 13px;
+            margin-left: -75px;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 1px;
+            background-color: $accent-color-light;
+            margin-top: 13px;
+            margin-left: 5px;
+        }
+      }
+    }
+  }
 }

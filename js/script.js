@@ -1,3 +1,268 @@
+document.body.style.overflow = 'hidden';
+
+window.addEventListener('load', function() {
+  const loader = document.getElementById('loader');
+  if (loader) {
+    loader.style.opacity = '0';
+    setTimeout(() => {
+      loader.style.display = 'none';
+      document.body.style.overflow = '';
+    }, 500);
+  }
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('nav')?.classList.add('nav-visible');
+});
+
+// Animate HOME section elements
+ScrollReveal().reveal('.section__info', {
+  duration: 1200,
+  origin: 'left',
+  distance: '60px',
+  opacity: 0,
+  delay: 200,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+ScrollReveal().reveal('.content__text', {
+  duration: 1200,
+  origin: 'bottom',
+  distance: '40px',
+  opacity: 0,
+  delay: 400,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+ScrollReveal().reveal('.btn-header a', {
+  duration: 1200,
+  origin: 'bottom',
+  distance: '20px',
+  opacity: 0,
+  delay: 600,
+  interval: 200,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate section__header
+ScrollReveal().reveal('.section__header', {
+  duration: 1000,
+  origin: 'top',
+  distance: '40px',
+  opacity: 0,
+  delay: 100,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate image-back
+ScrollReveal().reveal('.image-back', {
+  duration: 1000,
+  origin: 'left',
+  distance: '60px',
+  opacity: 0,
+  delay: 200,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate image-front
+ScrollReveal().reveal('.image-front', {
+  duration: 1000,
+  origin: 'right',
+  distance: '60px',
+  opacity: 0,
+  delay: 300,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate text-name
+ScrollReveal().reveal('.text-name', {
+  duration: 1000,
+  origin: 'bottom',
+  distance: '30px',
+  opacity: 0,
+  delay: 400,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate text-position
+ScrollReveal().reveal('.text-position', {
+  duration: 1000,
+  origin: 'bottom',
+  distance: '30px',
+  opacity: 0,
+  delay: 500,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate text-description
+ScrollReveal().reveal('.text-description', {
+  duration: 1000,
+  origin: 'bottom',
+  distance: '30px',
+  opacity: 0,
+  delay: 600,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate text-others
+ScrollReveal().reveal('.text-others', {
+  duration: 1000,
+  origin: 'bottom',
+  distance: '30px',
+  opacity: 0,
+  delay: 700,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+ScrollReveal().reveal('#passion-carousel', {
+  duration: 1200,
+  origin: 'bottom',
+  distance: '60px',
+  opacity: 0,
+  delay: 200,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+ScrollReveal().reveal('.skill__item', {
+  duration: 1000,
+  origin: 'bottom',
+  distance: '40px',
+  opacity: 0,
+  interval: 150, // Stagger each skill__item by 150ms
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate each tab button
+ScrollReveal().reveal('.tab-btn', {
+  duration: 900,
+  origin: 'left',
+  distance: '30px',
+  opacity: 0,
+  interval: 120,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate each project image
+ScrollReveal().reveal('.project-img', {
+  duration: 1000,
+  origin: 'bottom',
+  distance: '40px',
+  opacity: 0,
+  interval: 150,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate contacts-header
+ScrollReveal().reveal('.contacts-header', {
+  duration: 1000,
+  origin: 'top',
+  distance: '40px',
+  opacity: 0,
+  delay: 100,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+ScrollReveal().reveal('.section__contacts h3', {
+  duration: 900,
+  origin: 'left',
+  distance: '30px',
+  opacity: 0,
+  interval: 100,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate bxr icons
+ScrollReveal().reveal('.bxr', {
+  duration: 900,
+  origin: 'left',
+  distance: '30px',
+  opacity: 0,
+  interval: 100,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate detail-info
+ScrollReveal().reveal('.detail-info', {
+  duration: 1000,
+  origin: 'right',
+  distance: '40px',
+  opacity: 0,
+  interval: 120,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate each input
+ScrollReveal().reveal('input, textarea', {
+  duration: 1000,
+  origin: 'bottom',
+  distance: '30px',
+  opacity: 0,
+  interval: 120,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+ScrollReveal().reveal('.map_canvas', {
+  duration: 1000,
+  origin: 'bottom',
+  distance: '50px',
+  opacity: 0,
+  delay: 200,
+  easing: 'cubic-bezier(.77,0,.18,1)',
+  reset: false
+});
+
+// Animate .footer-content p
+  ScrollReveal().reveal('.footer-content p', {
+    duration: 900,
+    origin: 'bottom',
+    distance: '20px',
+    opacity: 0,
+    interval: 100,
+    easing: 'cubic-bezier(.77,0,.18,1)',
+    reset: false
+  });
+
+  // Animate .footer-content a
+  ScrollReveal().reveal('.footer-content a', {
+    duration: 900,
+    origin: 'bottom',
+    distance: '20px',
+    opacity: 0,
+    interval: 100,
+    easing: 'cubic-bezier(.77,0,.18,1)',
+    reset: false
+  });
+
+  // Animate footer-bottom
+  ScrollReveal().reveal('.footer-bottom', {
+    duration: 1000,
+    origin: 'top',
+    distance: '30px',
+    opacity: 0,
+    delay: 200,
+    easing: 'cubic-bezier(.77,0,.18,1)',
+    reset: false
+  });
+
 document.addEventListener('DOMContentLoaded', () => {
   if (roles.length) setTimeout(type, delayBetweenRoles);
 });
