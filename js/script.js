@@ -11,10 +11,6 @@ window.addEventListener('load', function() {
   }
 });
 
-window.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('nav')?.classList.add('nav-visible');
-});
-
 // Animate HOME section elements
 ScrollReveal().reveal('.section__info', {
   duration: 1200,
@@ -265,6 +261,7 @@ ScrollReveal().reveal('.map_canvas', {
 
 document.addEventListener('DOMContentLoaded', () => {
   if (roles.length) setTimeout(type, delayBetweenRoles);
+  document.querySelector('nav')?.classList.add('nav-visible');
 });
 
 
@@ -498,6 +495,11 @@ const projectImages = {
     "assets/img-projects/dms3.jpg",
     "assets/img-projects/dms4.jpg",
     "assets/img-projects/dms5.jpg",
+  ],
+  "Netflix Clone": [
+    "assets/img-projects/netflix1.jpg",
+    "assets/img-projects/netflix2.jpg",
+    "assets/img-projects/netflix3.jpg",
   ],
   // Add more titles and arrays as needed
 };

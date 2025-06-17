@@ -194,8 +194,8 @@ body {
     }
   }
 
-  .modal-prev { left: 1rem; }
-  .modal-next { right: 1rem; }
+  .modal-prev { left: 1rem; padding-right: 0.2rem; }
+  .modal-next { right: 1rem; padding-left: 0.2rem; }
 
   .modal-close {
     position: absolute;
