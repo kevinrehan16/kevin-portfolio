@@ -501,6 +501,29 @@ const projectImages = {
     "assets/img-projects/netflix2.jpg",
     "assets/img-projects/netflix3.jpg",
   ],
+  "Online Store": [
+    "assets/img-projects/store1.png",
+    "assets/img-projects/store2.png",
+    "assets/img-projects/store3.png",
+    "assets/img-projects/store4.png",
+  ],
+  "A.I Course Generator": [
+    "assets/img-projects/coursegenerator1.jpg",
+    "assets/img-projects/coursegenerator2.jpg",
+    "assets/img-projects/coursegenerator3.jpg",
+    "assets/img-projects/coursegenerator4.jpg",
+    "assets/img-projects/coursegenerator5.jpg",
+    "assets/img-projects/coursegenerator6.jpg",
+    "assets/img-projects/coursegenerator7.jpg",
+    "assets/img-projects/coursegenerator8.jpg",
+  ],
+  "Disciple Network": [
+    "assets/img-projects/disciple1.jpg",
+    "assets/img-projects/disciple2.jpg",
+    "assets/img-projects/disciple3.jpg",
+    "assets/img-projects/disciple4.jpg",
+    "assets/img-projects/disciple5.jpg",
+  ],
   // Add more titles and arrays as needed
 };
 
