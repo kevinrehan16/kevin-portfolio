@@ -266,10 +266,21 @@ header nav.nav-visible {
   opacity: 1;
   transform: translateY(0);
 }
-header nav .nav__logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #FE004D !important;
+header nav .nav__logo {
+  display: flex;
+  align-items: center;
+}
+header nav .nav__logo img.logo-img {
+  height: 30px !important; /* or try 50px */
+  object-fit: contain !important;
+}
+header nav .nav__logo span {
+  font-size: 50px;
+  color: #FE004D;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  font-family: "Syncopate", sans-serif;
 }
 header nav ul.nav__links {
   display: flex;

@@ -267,10 +267,21 @@ header {
     }
 
     .nav__logo {
-      a {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: $accent-color !important;
+      display: flex;
+      align-items: center;
+
+      img.logo-img {
+        height: 30px !important; /* or try 50px */
+        object-fit: contain !important;
+      }
+
+      span {
+        font-size: 50px;
+        color: $accent-color;
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+        font-family: $header-font;
       }
     }
 

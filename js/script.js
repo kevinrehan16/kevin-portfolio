@@ -524,6 +524,17 @@ const projectImages = {
     "assets/img-projects/disciple4.jpg",
     "assets/img-projects/disciple5.jpg",
   ],
+  "Mobius WIX Website": [
+    "assets/img-projects/mobius1.jpg",
+    "assets/img-projects/mobius2.jpg",
+    "assets/img-projects/mobius3.jpg",
+    "assets/img-projects/mobius4.jpg",
+  ],
+  "Ford Autos": [
+    "assets/img-projects/ford1.jpg",
+    "assets/img-projects/ford2.jpg",
+    "assets/img-projects/ford3.jpg",
+  ],
   // Add more titles and arrays as needed
 };
 
