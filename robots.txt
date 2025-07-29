@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kevinrehan16.github.io/kevin-portfolio/sitemap.xml
