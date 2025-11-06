@@ -1383,7 +1383,7 @@ header nav .nav__menu__btn:hover {
     width: 100% !important;
     align-self: center;
     text-align: center;
-    padding: 10rem 0 !important;
+    padding: 10rem 2rem !important;
   }
   #home .section__header .section__info h1, #home .section__header .section__info h2 {
     text-align: center !important;
