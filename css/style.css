@@ -335,6 +335,7 @@ header nav .nav__menu__btn:hover {
   position: relative;
 }
 #home .section__header {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -356,8 +357,8 @@ header nav .nav__menu__btn:hover {
 }
 #home .section__header .section__info {
   width: 100%;
-  align-self: flex-start;
-  text-align: left;
+  align-self: center;
+  text-align: center;
   padding: 5rem 7rem !important;
 }
 #home .section__header .section__info h1 {
@@ -1345,7 +1346,7 @@ header nav .nav__menu__btn:hover {
     top: 100%;
     left: 0;
     flex-direction: column;
-    background-color: #070d1b;
+    background-color: #121212;
     width: 100%;
     z-index: 2;
     text-align: center;
@@ -1354,6 +1355,10 @@ header nav .nav__menu__btn:hover {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s;
+  }
+  header nav ul.nav__links.scrolled {
+    background: #070d1b !important;
+    transition: background 0.3s;
   }
   header nav ul.nav__links li {
     padding: 0.5rem 0;
@@ -1364,8 +1369,8 @@ header nav .nav__menu__btn:hover {
     cursor: pointer;
     background-color: #FE004D;
   }
-  header nav ul.nav__links li:hover a {
-    color: #0f172a;
+  header nav ul.nav__links li:has(a.active) {
+    background-color: #FE004D;
   }
   #home .section__header {
     min-height: 100vh;
@@ -1378,7 +1383,7 @@ header nav .nav__menu__btn:hover {
     width: 100% !important;
     align-self: center;
     text-align: center;
-    padding: 10rem 2rem;
+    padding: 10rem 0 !important;
   }
   #home .section__header .section__info h1, #home .section__header .section__info h2 {
     text-align: center !important;
@@ -1403,6 +1408,7 @@ header nav .nav__menu__btn:hover {
   }
   #home .section__header .section__content .btn-header .btn {
     font-size: 0.8rem;
+    padding: 1rem 1rem;
   }
   #home .section__header .section__content p {
     font-size: 1.2rem;
@@ -1439,7 +1445,7 @@ header nav .nav__menu__btn:hover {
   #about .section__about {
     flex-direction: column;
     align-items: center;
-    padding: 0 2.5rem;
+    padding: 0 1.5rem;
   }
   #about .section__about .about__image {
     position: relative;
@@ -1471,8 +1477,12 @@ header nav .nav__menu__btn:hover {
   #about .section__about .about__info .text .text-position {
     font-size: 1.2rem;
   }
+  #about .section__about .about__info .text .text-description {
+    text-align: justify;
+    line-height: 1.5rem;
+  }
   #about .section__about .about__info .text .text-description, #about .section__about .about__info .text .text-others li {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   #about .section__about .about__info .text .text-description span:first-child, #about .section__about .about__info .text .text-others li span:first-child {
     display: inline-block;

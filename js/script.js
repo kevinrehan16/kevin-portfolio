@@ -344,12 +344,15 @@ setInterval(moveCarousel, 3000);
 
 window.addEventListener('scroll', function() {
   const header = document.querySelector('header');
+  const navLinks = document.querySelector('#nav-links');
   const homeSection = document.querySelector('#home');
   const homeHeight = homeSection.offsetHeight;
   if (window.scrollY > homeHeight - 80) { // 80 = approx nav height, adjust as needed
     header.classList.add('scrolled');
+    navLinks.classList.add('scrolled');
   } else {
     header.classList.remove('scrolled');
+    navLinks.classList.remove('scrolled');
   }
 
 
@@ -397,6 +400,10 @@ document.querySelectorAll('.nav__links a').forEach(link => {
     document.querySelectorAll('.nav__links a').forEach(l => l.classList.remove('active'));
     this.classList.add('active');
 
+    const isOpen = navLinks.classList.contains("open");
+    menuBtnIcon.setAttribute("class", isOpen ? "bx bx-menu-wider" : "bx bx-x");
+    navLinks.classList.remove("open");
+    
     // Optional: after 2 seconds, allow scroll to take over again
     clearTimeout(manualNavTimeout);
     manualNavTimeout = setTimeout(() => {

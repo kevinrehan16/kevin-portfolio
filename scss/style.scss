@@ -288,7 +288,6 @@ header {
     ul.nav__links {
       display: flex;
       gap: 20px;
-      
 
       li {
         a {
@@ -352,7 +351,7 @@ header {
   
 
   .section__header {
-    // width: 100%;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -383,8 +382,8 @@ header {
     .section__info {
       width: 100%;
       // background-color: #f43f75;
-      align-self: flex-start;
-      text-align: left;
+      align-self: center;
+      text-align: center;
       padding: 5rem 7rem !important;
       
 
@@ -1503,7 +1502,7 @@ header {
         top: 100%;
         left: 0;
         flex-direction: column;
-        background-color: $primary-color;
+        background-color: $bg-dark;
         width: 100%;
         z-index: 2;
         text-align: center;
@@ -1512,6 +1511,11 @@ header {
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.3s;
+
+        &.scrolled {
+          background: $primary-color !important; // or any color you want
+          transition: background 0.3s;
+        }
 
         li {
           padding: 0.5rem 0;
@@ -1523,8 +1527,12 @@ header {
             background-color: $accent-color;
           }
 
-          &:hover a {
-            color: $bg-dark-blue;
+          // &:hover a {
+          //   color: $bg-dark-blue;
+          // }
+
+          &:has(a.active) {
+            background-color: $accent-color;
           }
         }
       }
@@ -1547,7 +1555,7 @@ header {
         // background-color: #f43f75;
         align-self: center;
         text-align: center;
-        padding: 10rem 2rem;
+        padding: 10rem 0 !important;
   
         h1, h2 {
           text-align: center !important;
@@ -1575,6 +1583,7 @@ header {
 
           .btn {
             font-size: 0.8rem;
+            padding: 1rem 1rem;
           }
         }
 
@@ -1624,7 +1633,7 @@ header {
     .section__about {
       flex-direction: column;
       align-items: center;
-      padding: 0 2.5rem;
+      padding: 0 1.5rem;
 
       .about__image {
         position: relative;
@@ -1661,8 +1670,13 @@ header {
             font-size: 1.2rem;
           }
 
+          .text-description {
+            text-align: justify;
+            line-height: 1.5rem; 
+          }
+
           .text-description, .text-others li {
-            font-size: 1rem;
+            font-size: 0.8rem;
 
             span:first-child {
                 display: inline-block;
