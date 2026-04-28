@@ -184,7 +184,7 @@
           <p class="text-description">I'm a Software Developer with a passion for building efficient, scalable, and user-friendly applications. I specialize in both front-end and back-end development. I'm always eager to solve real-world problems through clean, maintainable code and continuous learning.</p>
           <ul class="text-others">
             <li><span>Birthday</span> : <span>July 06, 1995</span></li>
-            <li><span>Age</span> : <span>29 years old</span></li>
+            <li><span>Age</span> : <span><small style="font-size: 20px;" id="age" ></small> years old</span></li>
             <li><span>Religion</span> : <span>Christian</span></li>
             <li><span>From</span> : <span>Sucat, Muntinlupa City</span></li>
             <li><span>Language</span> : <span>English, Tagalog</span></li>
@@ -325,6 +325,13 @@
       <div class="skill__item">
         <div class="triangle"></div>
         <span class='skill-icon'>
+          <img src="assets/icons/express.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">Express.js</h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
           <img src="assets/icons/mysql.svg" alt="HTML5 Icon" width="40" height="40" />
         </span>
         <h4 class="skill-title">MySQL</h4>
@@ -334,7 +341,14 @@
         <span class='skill-icon'>
           <img src="assets/icons/api.svg" alt="HTML5 Icon" width="40" height="40" />
         </span>
-        <h4 class="skill-title">API</h4>
+        <h4 class="skill-title" style="display: grid; gap: 0;">APIs <small style="font-size: 10px;">(REST/SOAP)</small></h4>
+      </div>
+      <div class="skill__item">
+        <div class="triangle"></div>
+        <span class='skill-icon'>
+          <img src="assets/icons/postman.svg" alt="HTML5 Icon" width="40" height="40" />
+        </span>
+        <h4 class="skill-title">PostMan</h4>
       </div>
       
     </div>
@@ -352,6 +366,15 @@
       <button class="tab-btn" data-filter="personal">Personal</button>
     </div>
     <div class="projects__gallery">
+      <div class="project-img" data-type="company">
+        <img src="assets/img-projects/hris2.jpg" loading="lazy" alt="Company Project">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title text-center">Human Resource Management System</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
+        </div>
+      </div>
       <div class="project-img" data-type="company">
         <img src="assets/img-projects/mall1.jpg" loading="lazy" alt="Company Project">
         <div class="img-overlay">
@@ -388,20 +411,38 @@
           </div>
         </div>
       </div>
-      <div class="project-img" data-type="company">
-        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Client Project 2">
+      <div class="project-img" data-type="client">
+        <img src="assets/img-projects/disciple2.jpg" loading="lazy" alt="Personal Project 2">
         <div class="img-overlay">
           <div class="overlay-content">
-            <div class="overlay-title">Visitors Management</div>
+            <div class="overlay-title">Disciple Network</div>
             <i class="bx bx-search overlay-icon"></i>
           </div>
         </div>
       </div>
       <div class="project-img" data-type="company">
-        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Personal Project 1">
+        <img src="assets/img-projects/marina8.jpg" loading="lazy" alt="Company Project">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">FPMI Marina</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
+        </div>
+      </div>
+      <div class="project-img" data-type="company">
+        <img src="assets/img-projects/cityportal1.jpg" loading="lazy" alt="Personal Project 1">
         <div class="img-overlay">
           <div class="overlay-content">
             <div class="overlay-title">City Portal</div>
+            <i class="bx bx-search overlay-icon"></i>
+          </div>
+        </div>
+      </div>
+      <div class="project-img" data-type="company">
+        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Client Project 2">
+        <div class="img-overlay">
+          <div class="overlay-content">
+            <div class="overlay-title">Visitors Management</div>
             <i class="bx bx-search overlay-icon"></i>
           </div>
         </div>
@@ -438,24 +479,6 @@
         <div class="img-overlay">
           <div class="overlay-content">
             <div class="overlay-title">Equicom API</div>
-            <i class="bx bx-search overlay-icon"></i>
-          </div>
-        </div>
-      </div>
-      <div class="project-img" data-type="client">
-        <img src="assets/img-projects/disciple2.jpg" loading="lazy" alt="Personal Project 2">
-        <div class="img-overlay">
-          <div class="overlay-content">
-            <div class="overlay-title">Disciple Network</div>
-            <i class="bx bx-search overlay-icon"></i>
-          </div>
-        </div>
-      </div>
-      <div class="project-img" data-type="company">
-        <img src="assets/error/maintenancejpg.jpg" loading="lazy" alt="Company Project">
-        <div class="img-overlay">
-          <div class="overlay-content">
-            <div class="overlay-title">FPMI Marina</div>
             <i class="bx bx-search overlay-icon"></i>
           </div>
         </div>

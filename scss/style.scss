@@ -789,7 +789,6 @@ header {
       background-repeat: no-repeat;
       z-index: 1;
       will-change: transform;
-      transition: transform 0.1s;
 
       &::before {
         content: "";
@@ -1157,6 +1156,7 @@ header {
         border-radius: 2em;
         margin-bottom: 0.2em;
         box-shadow: 0 2px 8px rgba($accent-color, 0.08);
+        text-align: center !important;
       }
 
       .overlay-icon {

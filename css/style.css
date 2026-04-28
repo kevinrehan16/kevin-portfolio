@@ -710,7 +710,6 @@ header nav .nav__menu__btn:hover {
   background-repeat: no-repeat;
   z-index: 1;
   will-change: transform;
-  transition: transform 0.1s;
 }
 #passions .section__team .parallax-team-bg::before {
   content: "";
@@ -1026,6 +1025,7 @@ header nav .nav__menu__btn:hover {
   border-radius: 2em;
   margin-bottom: 0.2em;
   box-shadow: 0 2px 8px rgba(254, 0, 77, 0.08);
+  text-align: center !important;
 }
 #projects .project-img .img-overlay .overlay-icon {
   color: #fff;

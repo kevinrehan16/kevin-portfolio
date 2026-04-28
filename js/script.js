@@ -487,9 +487,41 @@ function animateFLIP(container, callback) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const ageDisplay = document.getElementById('age');
+
+  function computeAge() {
+    const birthDate = new Date('1995-07-06'); // 👉 PALITAN MO ITO
+
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birthDate.getDate())
+    ) {
+      age--;
+    }
+
+    ageDisplay.textContent = age;
+  }
+
+  computeAge();
+});
+
 
 // Modal logic for project images
 const projectImages = {
+  "Human Resource Management System": [
+    "assets/img-projects/hris1.jpg",
+    "assets/img-projects/hris2.jpg",
+    "assets/img-projects/hris3.jpg",
+    "assets/img-projects/hris4.jpg",
+    "assets/img-projects/hris5.jpg",
+    "assets/img-projects/hris6.jpg",
+  ],
   "Mall Management": [
     "assets/img-projects/mall1.jpg",
     "assets/img-projects/mall2.jpg",
@@ -536,6 +568,28 @@ const projectImages = {
     "assets/img-projects/mobius2.jpg",
     "assets/img-projects/mobius3.jpg",
     "assets/img-projects/mobius4.jpg",
+  ],
+  "FPMI Marina": [
+    "assets/img-projects/marina1.jpg",
+    "assets/img-projects/marina2.jpg",
+    "assets/img-projects/marina3.jpg",
+    "assets/img-projects/marina4.jpg",
+    "assets/img-projects/marina5.jpg",
+    "assets/img-projects/marina6.jpg",
+    "assets/img-projects/marina7.jpg",
+    "assets/img-projects/marina8.jpg",
+  ],
+  "City Portal": [
+    "assets/img-projects/cityportal1.jpg",
+    "assets/img-projects/cityportal2.jpg",
+    "assets/img-projects/cityportal3.jpg",
+    "assets/img-projects/cityportal4.jpg",
+    "assets/img-projects/cityportal5.jpg",
+    "assets/img-projects/cityportal6.jpg",
+    "assets/img-projects/cityportal7.jpg",
+    "assets/img-projects/cityportal8.jpg",
+    "assets/img-projects/cityportal9.jpg",
+    "assets/img-projects/cityportal10.jpg",
   ],
   "Ford Autos": [
     "assets/img-projects/ford1.jpg",
