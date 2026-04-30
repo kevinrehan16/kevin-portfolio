@@ -514,7 +514,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Modal logic for project images
 const projectImages = {
-  "Human Resource Management System": [
+  "Human Resource Management": [
     "assets/img-projects/hris1.jpg",
     "assets/img-projects/hris2.jpg",
     "assets/img-projects/hris3.jpg",
@@ -545,6 +545,11 @@ const projectImages = {
     "assets/img-projects/store2.png",
     "assets/img-projects/store3.png",
     "assets/img-projects/store4.png",
+  ],
+  "Employee Management": [
+    "assets/img-projects/portal1.jpg",
+    "assets/img-projects/portal2.jpg",
+    "assets/img-projects/portal3.jpg",
   ],
   "A.I Course Generator": [
     "assets/img-projects/coursegenerator1.jpg",
